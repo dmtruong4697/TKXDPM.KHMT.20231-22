@@ -17,7 +17,7 @@ This is a Capstone's source code for Software Design and Construction project
   <summary>W10: 27/11/2023~03/11/2023 </summary>
 <br>
 <details>
-<summary>Dương Minh Ttuongwr</summary>
+<summary>Dương Minh Trưởng</summary>
 <br>
 
 - Assigned tasks:
