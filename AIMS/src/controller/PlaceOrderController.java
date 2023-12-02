@@ -1,3 +1,5 @@
+//low coupling (data coupling) 
+//Các phương thức của PlaceOrderController không truyền đối tượng hoặc dữ liệu quá nhiều cho nhau.
 package controller;
 
 import java.io.IOException;
