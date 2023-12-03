@@ -102,13 +102,13 @@ public class DVD extends Media {
     }
 
     @Override
-    public Media getMediaById(int id) throws SQLException {
+    public Media getMediaById(int id) throws SQLException {//DVD and Media datacoupling through getMediaByID
         String sql = "SELECT * FROM "+
                      "aims.DVD " +
                      "INNER JOIN aims.Media " +
                      "ON Media.id = DVD.id " +
                      "where Media.id = " + id + ";";
-        ResultSet res = stm.executeQuery(sql);
+        ResultSet res = stm.executeQuery(sql); //DVD and ResultSet datacoupling through getMediaByID
         if(res.next()) {
             
         // from media table

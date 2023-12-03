@@ -8,7 +8,7 @@ public class OrderMedia {
     private int price;
     private int quantity;
 
-    public OrderMedia(Media media, int quantity, int price) {
+    public OrderMedia(Media media, int quantity, int price) { //OrderMedia and Media datacoupling through media variable
         this.media = media;
         this.quantity = quantity;
         this.price = price;

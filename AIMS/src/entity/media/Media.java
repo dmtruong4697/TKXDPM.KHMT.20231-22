@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import entity.db.AIMSDB;
+import entity.db.AIMSDB;m
 import utils.Utils;
 
 /**
@@ -16,7 +16,7 @@ import utils.Utils;
  */
 public class Media {
 
-    private static Logger LOGGER = Utils.getLogger(Media.class.getName());
+    private static Logger LOGGER = Utils.getLogger(Media.class.getName()); //Media and Logger datacoupling through LOGGER variable 
 
     protected Statement stm;
     protected int id;
@@ -27,8 +27,7 @@ public class Media {
     protected int quantity;
     protected String type;
     protected String imageURL;
-
-    public Media() throws SQLException{
+    public Media() throws SQLException{ //Media and AIMSDB datacoupling through stm variable
         stm = AIMSDB.getConnection().createStatement();
     }
 
@@ -52,7 +51,7 @@ public class Media {
     public Media getMediaById(int id) throws SQLException{
         String sql = "SELECT * FROM Media ;";
         Statement stm = AIMSDB.getConnection().createStatement();
-        ResultSet res = stm.executeQuery(sql);
+        ResultSet res = stm.executeQuery(sql);//Media and ResulSet datacoupling through getMediaByID 
 		if(res.next()) {
 
             return new Media()
@@ -69,7 +68,7 @@ public class Media {
 
     public List getAllMedia() throws SQLException{
         Statement stm = AIMSDB.getConnection().createStatement();
-        ResultSet res = stm.executeQuery("select * from Media");
+        ResultSet res = stm.executeQuery("select * from Media");//Media and ResultSet datacoupling through getAllMedia
         ArrayList medium = new ArrayList<>();
         while (res.next()) {
             Media media = new Media()

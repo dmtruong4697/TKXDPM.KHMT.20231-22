@@ -69,18 +69,18 @@ public class CD extends Media {
     }
 
     @Override
-    public Media getMediaById(int id) throws SQLException {
+    public Media getMediaById(int id) throws SQLException {//CD and Media data coupling through getMediaById
         String sql = "SELECT * FROM "+
                      "aims.CD " +
                      "INNER JOIN aims.Media " +
                      "ON Media.id = CD.id " +
                      "where Media.id = " + id + ";";
-        ResultSet res = stm.executeQuery(sql);
+        ResultSet res = stm.executeQuery(sql); //CD and ResultSet data coupling through getMediaById
 		if(res.next()) {
             
             // from media table
             String title = "";
-            String type = res.getString("type");
+            String type = res.getString("type"); 
             int price = res.getInt("price");
             String category = res.getString("category");
             int quantity = res.getInt("quantity");

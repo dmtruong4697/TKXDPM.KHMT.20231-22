@@ -9,7 +9,7 @@ public class PaymentTransaction {
 	private String createdAt;
 	
 	public PaymentTransaction(String errorCode, CreditCard card, String transactionId, String transactionContent,
-			int amount, String createdAt) {
+			int amount, String createdAt) { //PaymentTransaction and CreditCard datacoupling through card variable
 		super();
 		this.errorCode = errorCode;
 		this.card = card;

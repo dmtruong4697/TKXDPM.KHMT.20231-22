@@ -9,7 +9,7 @@ import utils.Configs;
 public class Order {
     
     private int shippingFees;
-    private List lstOrderMedia;
+    private List lstOrderMedia;//Order and OrderMedia datacoupling through 1stOrderMedia variable 
     private HashMap<String, String> deliveryInfo;
 
     public Order(){
@@ -58,7 +58,7 @@ public class Order {
             OrderMedia om = (OrderMedia) object;
             amount += om.getPrice();
         }
-        return (int) (amount + (Configs.PERCENT_VAT/100)*amount);
+        return (int) (amount + (Configs.PERCENT_VAT/100)*amount);//Order and Configs datacoupling through getAmount 
     }
 
 }

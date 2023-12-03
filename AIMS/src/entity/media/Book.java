@@ -104,14 +104,14 @@ public class Book extends Media {
     }
 
     @Override
-    public Media getMediaById(int id) throws SQLException {
+    public Media getMediaById(int id) throws SQLException { 
         String sql = "SELECT * FROM "+
                      "aims.Book " +
                      "INNER JOIN aims.Media " +
                      "ON Media.id = Book.id " +
                      "where Media.id = " + id + ";";
-        Statement stm = AIMSDB.getConnection().createStatement();
-        ResultSet res = stm.executeQuery(sql);
+        Statement stm = AIMSDB.getConnection().createStatement();//Book and AIMSDB data coupling through getMediaByID
+        ResultSet res = stm.executeQuery(sql); //Book and ResultSet data coupling through getMediaByID
 		if(res.next()) {
 
             // from Media table
