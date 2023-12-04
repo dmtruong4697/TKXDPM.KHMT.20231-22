@@ -25,7 +25,7 @@ This is a Capstone's source code for Software Design and Construction project
 
 </details>
 <details>
-<summaryHồ Anh Trí</summary>
+<summary>Hồ Anh Trí</summary>
 <br>
 
 - Assigned tasks:
