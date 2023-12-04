@@ -23,6 +23,8 @@ This is a Capstone's source code for Software Design and Construction project
 - Assigned tasks:
   - Đánh giá mức độ coupling trong các folder: default package, common, controller, entity.cart, entity.db
 
+</details>
+<details>
 <summaryHồ Anh Trí</summary>
 <br>
 
