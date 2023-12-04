@@ -1,3 +1,6 @@
+//high coupling (control coupling) 
+//BaseController trực tiếp gọi các phương thức của lớp Cart và sử dụng lớp CartMedia
+
 package controller;
 
 import java.util.List;

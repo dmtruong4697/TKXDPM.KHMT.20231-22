@@ -1,3 +1,6 @@
+//low coupling (data coupling) 
+//Việc sử dụng các đối tượng như Cart và CartMedia không gây ảnh hưởng lớn đến ViewCartController vì chúng được sử dụng như các đối tượng hỗ trợ, không làm giảm tính độc lập của ViewCartController.
+
 package controller;
 
 import java.sql.SQLException;

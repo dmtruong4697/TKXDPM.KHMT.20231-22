@@ -1,3 +1,5 @@
+//low coupling (data coupling)
+
 package common.exception;;
 
 public class PaymentException extends RuntimeException {
