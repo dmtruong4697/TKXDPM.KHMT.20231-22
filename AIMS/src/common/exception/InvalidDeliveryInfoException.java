@@ -1,5 +1,6 @@
 //low coupling (data coupling)
 
+//Functional Cohesion
 package common.exception;;
 
 /**
@@ -8,6 +9,8 @@ package common.exception;;
  * 
  * @author nguyenlm
  */
+
+//functional cohesion
 public class InvalidDeliveryInfoException extends AimsException {
 
 	private static final long serialVersionUID = 1091337136123906298L;

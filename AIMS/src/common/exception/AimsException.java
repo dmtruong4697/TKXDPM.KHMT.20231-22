@@ -8,6 +8,9 @@ package common.exception;;
  * 
  * @author nguyenlm
  */
+
+//functional cohesion
+//Đây là một lớp ngoại lệ không kiểm soát được dùng để bao gồm tất cả các ngoại lệ không kiểm soát. Bạn có thể sử dụng nó để thông báo về các vấn đề liên quan đến dữ liệu.
 public class AimsException extends RuntimeException {
 
     public AimsException() {

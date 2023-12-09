@@ -1,6 +1,9 @@
 //low coupling (control coupling)
 //Lớp App chứa quyết định và kiểm soát dòng luồng của ứng dụng từ màn hình khởi đầu (splash screen) đến màn hình chính (home screen).
 
+
+//Functional Cohesion
+//Sequential Cohesion
 import java.io.IOException;
 
 import javafx.animation.FadeTransition;
@@ -21,6 +24,9 @@ public class App extends Application {
 	ImageView logo;
 
 	@Override
+	// functional cohesion
+	// Hàm này chịu trách nhiệm khởi tạo và hiển thị màn hình splash, xử lý hiệu ứng chuyển động và sau đó tải màn hình chính.
+	// Nó thể hiện cohesion chức năng vì nó nhóm các hoạt động liên quan để hiển thị màn hình ban đầu của ứng dụng.
 	public void start(Stage primaryStage) {
 		try {
 

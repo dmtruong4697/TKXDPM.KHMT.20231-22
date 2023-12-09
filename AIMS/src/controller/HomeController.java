@@ -21,6 +21,9 @@ public class HomeController extends BaseController{
      * @return List[Media]
      * @throws SQLException
      */
+	
+	// control cohesion
+	// Phương thức getAllMedia() làm việc trực tiếp với lớp Media để lấy danh sách tất cả các đối tượng Media từ cơ sở dữ liệu và trả về để hiển thị trên màn hình chính.
     public List getAllMedia() throws SQLException{
         return new Media().getAllMedia();
     }
