@@ -1,3 +1,7 @@
+//Mức Độ Coupling: Moderate (control coupling)
+//Lớp AIMSDB chịu trách nhiệm khởi tạo và duy trì kết nối đến cơ sở dữ liệu SQLite.
+//Sự phụ thuộc này được thể hiện trong phương thức getConnection, nơi mà lớp này kiểm soát quá trình thiết lập kết nối và trả về đối tượng kết nối.
+
 package entity.db;
 
 import java.sql.DriverManager;

@@ -1,3 +1,6 @@
+//low coupling (control coupling)
+//Lớp App chứa quyết định và kiểm soát dòng luồng của ứng dụng từ màn hình khởi đầu (splash screen) đến màn hình chính (home screen).
+
 import java.io.IOException;
 
 import javafx.animation.FadeTransition;
