@@ -1,3 +1,6 @@
+//Mức Độ Coupling: Low
+//Tất cả dữ liệu (media, quantity, price) được giữ bên trong lớp CartMedia và được truy cập thông qua các phương thức getter và setter
+
 package entity.cart;
 
 import entity.media.Media;

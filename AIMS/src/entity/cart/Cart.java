@@ -1,3 +1,6 @@
+//Mức Độ Coupling: Moderate (control coupling)
+//Lớp Cart chứa các phương thức kiểm tra sự khả dụng của sản phẩm trong giỏ hàng và xử lý các thao tác như thêm, xóa, và kiểm tra tồn kho.
+
 package entity.cart;
 
 import java.sql.SQLException;
