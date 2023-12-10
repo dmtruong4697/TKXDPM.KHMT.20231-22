@@ -7,14 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import entity.db.AIMSDB;m
+import entity.db.AIMSDB;
 import utils.Utils;
 
 /**
  * The general media class, for another media it can be done by inheriting this class
  * @author nguyenlm
  */
-public class Media {
+public class Media {//Functional Cohesion:manage information about media,Procedural Cohesion
 
     private static Logger LOGGER = Utils.getLogger(Media.class.getName()); //Media and Logger datacoupling through LOGGER variable 
 
@@ -48,7 +48,7 @@ public class Media {
         return updated_quantity;
     }
 
-    public Media getMediaById(int id) throws SQLException{
+    public Media getMediaById(int id) throws SQLException{//Communicational Cohesion:communicate with database
         String sql = "SELECT * FROM Media ;";
         Statement stm = AIMSDB.getConnection().createStatement();
         ResultSet res = stm.executeQuery(sql);//Media and ResulSet datacoupling through getMediaByID 
@@ -66,7 +66,7 @@ public class Media {
         return null;
     }
 
-    public List getAllMedia() throws SQLException{
+    public List getAllMedia() throws SQLException{//Communication Cohesion:communicate with database
         Statement stm = AIMSDB.getConnection().createStatement();
         ResultSet res = stm.executeQuery("select * from Media");//Media and ResultSet datacoupling through getAllMedia
         ArrayList medium = new ArrayList<>();

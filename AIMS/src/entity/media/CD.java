@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
-public class CD extends Media {
+public class CD extends Media {//Functional Cohesion:manage information about CD,Procedural Cohesion
 
     String artist;
     String recordLabel;
@@ -70,7 +70,7 @@ public class CD extends Media {
 
     @Override
     public Media getMediaById(int id) throws SQLException {//CD and Media data coupling through getMediaById
-        String sql = "SELECT * FROM "+
+        String sql = "SELECT * FROM "+                     //Communicational Cohesion:comunicate with database
                      "aims.CD " +
                      "INNER JOIN aims.Media " +
                      "ON Media.id = CD.id " +

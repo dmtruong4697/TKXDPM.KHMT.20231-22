@@ -6,7 +6,7 @@ import java.util.List;
 
 import utils.Configs;
 
-public class Order {
+public class Order {//Functional Cohesion:manage information about,Procedural Cohesion
     
     private int shippingFees;
     private List lstOrderMedia;//Order and OrderMedia datacoupling through 1stOrderMedia variable 
@@ -52,7 +52,7 @@ public class Order {
         this.deliveryInfo = deliveryInfo;
     }
 
-    public int getAmount(){
+    public int getAmount(){//Communicational Cohesion:Configs to get 'PERCENT_VAT',link with OrderMedia through 1stOrderMedia,Hashmap through deliveryInfo
         double amount = 0;
         for (Object object : lstOrderMedia) {
             OrderMedia om = (OrderMedia) object;
