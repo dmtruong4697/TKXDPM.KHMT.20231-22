@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
-public class CD extends Media {
+public class CD extends Media {//Functional Cohesion:manage information about CD,Procedural Cohesion
 
     String artist;
     String recordLabel;
@@ -69,18 +69,18 @@ public class CD extends Media {
     }
 
     @Override
-    public Media getMediaById(int id) throws SQLException {
-        String sql = "SELECT * FROM "+
+    public Media getMediaById(int id) throws SQLException {//CD and Media data coupling through getMediaById
+        String sql = "SELECT * FROM "+                     //Communicational Cohesion:comunicate with database
                      "aims.CD " +
                      "INNER JOIN aims.Media " +
                      "ON Media.id = CD.id " +
                      "where Media.id = " + id + ";";
-        ResultSet res = stm.executeQuery(sql);
+        ResultSet res = stm.executeQuery(sql); //CD and ResultSet data coupling through getMediaById
 		if(res.next()) {
             
             // from media table
             String title = "";
-            String type = res.getString("type");
+            String type = res.getString("type"); 
             int price = res.getInt("price");
             String category = res.getString("category");
             int quantity = res.getInt("quantity");
