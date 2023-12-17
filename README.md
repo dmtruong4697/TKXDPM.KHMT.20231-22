@@ -45,4 +45,17 @@ This is a Capstone's source code for Software Design and Construction project
 </details>
 </details>
 
+<details>
+  <summary>W11: 11/12/2023~18/12/2023 </summary>
+<br>
+<details>
+<summary>Dương Minh Trưởng</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá mức độ S.O.L.I.D trong các folder: default package, common, controller, entity.cart, entity.db
+
+</details>
+</details>
+
 ---
