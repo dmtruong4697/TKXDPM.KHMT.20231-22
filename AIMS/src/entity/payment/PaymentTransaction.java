@@ -23,3 +23,4 @@ public class PaymentTransaction {//Functional Cohesion:manage information about 
 		return errorCode;
 	}
 }
+//Không vi phạm tiêu chí SOLID nào

@@ -139,3 +139,9 @@ public class DVD extends Media {//Functional Cohesion:manage information about D
         return null;
     }
 }
+//Vi phạm tiêu chí SOLID
+//SRP:Lớp DVD đang thực hiện nhiều trách nhiệm, bao gồm quản lý thông tin về DVD, tương tác với cơ sở dữ liệu thông qua getMediaById,
+//DIP:Lớp DVD phụ thuộc trực tiếp vào ResultSet và stm (statement), làm cho nó khó tái sử dụng và khó kiểm thử
+//Solution:
+//SRP:Tách chức năng của lớp DVD thành các lớp nhỏ hơn
+//DIP:Sử dụng Dependency Injection (DI) để cung cấp ResultSet và stm từ bên ngoài vào lớp DVD.

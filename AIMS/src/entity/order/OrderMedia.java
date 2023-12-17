@@ -48,3 +48,4 @@ public class OrderMedia {//Functional Cohesion:manage information about OrderMed
     }
 
 }
+//Không vi phạm tiêu chí SOLID nào

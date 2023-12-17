@@ -158,3 +158,10 @@ public class Book extends Media {//Functional Cohesion:manage information about 
             "}";
     }
 }
+//Vi phạm tiêu chí SOLID
+//SRP:Class Book có nhiều trách nhiệm,quản lý Book,tương tác với Database thông qua 'getMediaById'
+//DIP:Class Book phụ thuộc trực tiếp vào 'Statement' và 'ResultSet' => khó tái sử dụng
+//Solution:
+//SRP:Tách class Book thành các lớp nhỏ hơn 
+//DIP:Sử dụng Dependency Injection để cung cấp 'Statement' và 'ResultSet' từ bên ngoài Book
+
