@@ -14,15 +14,14 @@ This is a Capstone's source code for Software Design and Construction project
 ## Report Content
 
 <details>
-  <summary>W10: 27/11/2023~03/11/2023 </summary>
+  <summary>W12:4/12-10/12 </summary>
 <br>
 <details>
-<summary>Dương Minh Trưởng</summary>
+<summary>Hồ Anh Trí</summary>
 <br>
 
 - Assigned tasks:
   - Đánh giá mức độ coupling trong các folder: default package, common, controller, entity.cart, entity.db
-
 </details>
 <details>
 <summary>Hồ Anh Trí</summary>

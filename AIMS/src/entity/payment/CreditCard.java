@@ -2,7 +2,7 @@ package entity.payment;
 
 import java.sql.Timestamp;
 
-public class CreditCard {
+public class CreditCard {//Functional Cohesion:manage information about CreditCard,Procedural Cohesion
 	private String cardCode;
 	private String owner;
 	private int cvvCode;

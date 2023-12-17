@@ -6,10 +6,10 @@ import java.util.List;
 
 import utils.Configs;
 
-public class Order {
+public class Order {//Functional Cohesion:manage information about,Procedural Cohesion
     
     private int shippingFees;
-    private List lstOrderMedia;
+    private List lstOrderMedia;//Order and OrderMedia datacoupling through 1stOrderMedia variable 
     private HashMap<String, String> deliveryInfo;
 
     public Order(){
@@ -52,13 +52,13 @@ public class Order {
         this.deliveryInfo = deliveryInfo;
     }
 
-    public int getAmount(){
+    public int getAmount(){//Communicational Cohesion:Configs to get 'PERCENT_VAT',link with OrderMedia through 1stOrderMedia,Hashmap through deliveryInfo
         double amount = 0;
         for (Object object : lstOrderMedia) {
             OrderMedia om = (OrderMedia) object;
             amount += om.getPrice();
         }
-        return (int) (amount + (Configs.PERCENT_VAT/100)*amount);
+        return (int) (amount + (Configs.PERCENT_VAT/100)*amount);//Order and Configs datacoupling through getAmount 
     }
 
 }
