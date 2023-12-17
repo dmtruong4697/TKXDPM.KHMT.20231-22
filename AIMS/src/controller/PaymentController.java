@@ -1,6 +1,8 @@
 //low coupling (data coupling) 
 //Các phương thức của PaymentController không truyền đối tượng hoặc dữ liệu quá nhiều cho nhau.
 
+//Single Responsibility Principle
+//PaymentController chịu trách nhiệm cho việc kiểm soát quá trình thanh toán và xử lý logic liên quan đến thẻ tín dụng. Có vẻ như nó tuân thủ nguyên tắc Single Responsibility Principle.
 package controller;
 
 import java.util.Calendar;

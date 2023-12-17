@@ -1,6 +1,9 @@
 //low coupling (data coupling) 
 //HomeController sử dụng lớp Media để lấy danh sách tất cả các phương tiện từ cơ sở dữ liệu, nhưng cũng không có mức độ phụ thuộc cao vào Media đối với HomeController.
 
+//Liskov Substitution
+//HomeController mở rộng từ BaseController, nhưng không triển khai các phương thức checkMediaInCart và getListCartMedia từ BaseController. Điều này có thể làm cho việc thay thế BaseController bằng HomeController gây ra vấn đề.
+
 package controller;
 
 import java.sql.SQLException;
