@@ -20,6 +20,8 @@ public class BaseController {
      * @param media
      * @return CartMedia or null
      */
+	// functional cohesion
+	// Phương thức checkMediaInCart(Media media) làm việc trực tiếp với lớp Cart, kiểm tra xem Media có trong Cart hay không và trả về CartMedia tương ứng hoặc null.
     public CartMedia checkMediaInCart(Media media){
         return Cart.getCart().checkMediaInCart(media);
     }
@@ -28,6 +30,8 @@ public class BaseController {
      * This method gets the list of items in cart
      * @return List[CartMedia]
      */
+    // functional cohesion
+    // Phương thức getListCartMedia() làm việc trực tiếp với lớp Cart, lấy danh sách các mục trong Cart.
     public List getListCartMedia(){
         return Cart.getCart().getListMedia();
     }

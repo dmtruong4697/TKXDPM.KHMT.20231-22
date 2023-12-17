@@ -1,6 +1,8 @@
 //low coupling (data coupling) 
 //Việc sử dụng các đối tượng như Cart và CartMedia không gây ảnh hưởng lớn đến ViewCartController vì chúng được sử dụng như các đối tượng hỗ trợ, không làm giảm tính độc lập của ViewCartController.
 
+// functional cohesion
+// Cả hai phương thức checkAvailabilityOfProduct() và getCartSubtotal() đều liên quan đến quá trình quản lý và tính toán trên đối tượng Cart, chúng cùng chịu trách nhiệm cho các chức năng cụ thể trong ngữ cảnh xem giỏ hàng.
 package controller;
 
 import java.sql.SQLException;
