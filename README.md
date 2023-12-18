@@ -17,7 +17,7 @@ This is a Capstone's source code for Software Design and Construction project
   <summary>W12:4/12-10/12 </summary>
 <br>
 <details>
-<summary>Hồ Anh Trí</summary>
+<summary>Dương Minh Trưởng</summary>
 <br>
 
 - Assigned tasks:
@@ -43,6 +43,14 @@ This is a Capstone's source code for Software Design and Construction project
   - Đánh giá mức độ cohesion trong các folder: default package, common, controller, entity.cart, entity.db
 
 </details>
+<details>
+<summary>Hồ Anh Trí</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá mức độ cohesion trong các folder: entity.Invoice, Media, Order, Payment, Shipping
+
+</details>
 </details>
 
 <details>
@@ -54,6 +62,14 @@ This is a Capstone's source code for Software Design and Construction project
 
 - Assigned tasks:
   - Đánh giá mức độ S.O.L.I.D trong các folder: default package, common, controller, entity.cart, entity.db
+
+</details>
+<details>
+<summary>Hồ Anh Trí</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá mức độ S.O.L.I.D trong các folder: entity.Invoice,Media,Order,Payment,Shipping
 
 </details>
 </details>
