@@ -168,3 +168,9 @@ public class Media {//Functional Cohesion:manage information about media,Procedu
     }    
 
 }
+//Vi phạm tiêu chí SOLID
+//SRP:Lớp Media đang thực hiện nhiều trách nhiệm, bao gồm quản lý thông tin về phương tiện (Media), tương tác với cơ sở dữ liệu thông qua các phương thức như getMediaById và getAllMedia, và cũng thực hiện cập nhật dữ liệu thông qua updateMediaFieldById. 
+//DIP:Lớp Media phụ thuộc trực tiếp vào Statement và ResultSet, làm cho nó khó tái sử dụng và kiểm thử
+//Solution:
+//SRP:Tách chức năng của lớp Media thành các lớp nhỏ hơn với mỗi lớp có một trách nhiệm cụ thể
+//DIP:Sử dụng Dependency Injection (DI) để cung cấp Statement và ResultSet từ bên ngoài vào lớp Media.Sử dụng Interface để đại diện cho các phụ thuộc, giúp giảm sự phụ thuộc cụ thể và tăng tính linh hoạt.

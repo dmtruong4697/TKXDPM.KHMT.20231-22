@@ -105,3 +105,9 @@ public class CD extends Media {//Functional Cohesion:manage information about CD
     }
 
 }
+//Vi phạm tiêu chí SOLID
+//SRP:Class CD thực hiện nhiều trách nhiệm,quản lý CD,tương tác với Database thông qua 'getMediaById'
+//DIP:Class CD phụ thuộc trực tiếp 'ResultSet' và 'stm' => khó tái sử dụng và khó kiểm thử 
+//Solution:
+//SRP:Tách class CD thành các lớp nhỏ hơn
+//DIP:Sử dụng Dependency Injection để cung cấp 'ResultSet' và 'stm' từ bên ngoài 

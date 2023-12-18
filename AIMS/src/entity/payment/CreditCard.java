@@ -16,3 +16,5 @@ public class CreditCard {//Functional Cohesion:manage information about CreditCa
 		this.dateExpired = dateExpired;
 	}
 }
+
+//Không vi phạm tiêu chí SOLID nào

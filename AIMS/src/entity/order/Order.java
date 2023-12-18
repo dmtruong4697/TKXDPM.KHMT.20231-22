@@ -62,3 +62,9 @@ public class Order {//Functional Cohesion:manage information about,Procedural Co
     }
 
 }
+//Vi phạm tiêu chí SOLID
+//SRP:Lớp Order có vẻ thực hiện nhiều trách nhiệm, bao gồm quản lý thông tin đơn hàng, tương tác với danh sách sản phẩm đơn hàng (lstOrderMedia), tính toán tổng số tiền (getAmount), và quản lý thông tin giao hàng (deliveryInfo). Điều này làm giảm tính rõ ràng và dễ bảo trì của lớp.
+//DIP:Lớp Order phụ thuộc trực tiếp vào OrderMedia thông qua lstOrderMedia, và cũng phụ thuộc vào Configs
+//Solution
+//SRP:Tách chức năng của lớp Order thành các lớp nhỏ hơn với mỗi lớp có một trách nhiệm cụ thể
+//DIP:Sử dụng Dependency Injection (DI) để cung cấp các phụ thuộc từ bên ngoài vào lớp Order, thay vì tạo ngay tại bên trong lớp.Sử dụng Interface để đại diện cho các phụ thuộc, giúp giảm sự phụ thuộc cụ thể và tăng tính linh hoạt.
