@@ -33,7 +33,7 @@ This is a Capstone's source code for Software Design and Construction project
 </details>
 
 <details>
-  <summary>W11: 04/12/2023~11/12/2023 </summary>
+  <summary>W13: 04/12/2023~11/12/2023 </summary>
 <br>
 <details>
 <summary>Dương Minh Trưởng</summary>
@@ -41,6 +41,19 @@ This is a Capstone's source code for Software Design and Construction project
 
 - Assigned tasks:
   - Đánh giá mức độ cohesion trong các folder: default package, common, controller, entity.cart, entity.db
+
+</details>
+</details>
+
+<details>
+  <summary>W14: 11/12/2023~18/12/2023 </summary>
+<br>
+<details>
+<summary>Dương Minh Trưởng</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá mức độ S.O.L.I.D trong các folder: default package, common, controller, entity.cart, entity.db
 
 </details>
 </details>

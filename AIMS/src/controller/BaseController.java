@@ -1,6 +1,7 @@
 //high coupling (control coupling) 
 //BaseController trực tiếp gọi các phương thức của lớp Cart và sử dụng lớp CartMedia
 
+//Violate Liskov Substitution Principle because not every subclass needs to checkMediaCart and getListCartMedia
 package controller;
 
 import java.util.List;
