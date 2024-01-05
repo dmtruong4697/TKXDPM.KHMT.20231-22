@@ -1,3 +1,5 @@
+//low coupling (data coupling) 
+//Các phương thức của PlaceOrderController không truyền đối tượng hoặc dữ liệu quá nhiều cho nhau.
 package controller;
 
 import java.io.IOException;
@@ -66,6 +68,9 @@ public class PlaceOrderController extends BaseController{
      * @throws InterruptedException
      * @throws IOException
      */
+    // functional cohesion
+    // Phương thức processDeliveryInfo(HashMap<String, String> info) và validateDeliveryInfo(HashMap<String, String> info) chịu trách nhiệm cho xử lý thông tin giao hàng và kiểm tra thông tin giao hàng, đều liên quan đến một quá trình cụ thể.
+
     public void processDeliveryInfo(HashMap info) throws InterruptedException, IOException{
         LOGGER.info("Process Delivery Info");
         LOGGER.info(info.toString());

@@ -1,3 +1,8 @@
+//low coupling (data coupling) 
+//Các phương thức của PaymentController không truyền đối tượng hoặc dữ liệu quá nhiều cho nhau.
+
+//Single Responsibility Principle
+//PaymentController chịu trách nhiệm cho việc kiểm soát quá trình thanh toán và xử lý logic liên quan đến thẻ tín dụng. Có vẻ như nó tuân thủ nguyên tắc Single Responsibility Principle.
 package controller;
 
 import java.util.Calendar;
@@ -44,6 +49,9 @@ public class PaymentController extends BaseController {
 	 * @throws InvalidCardException - if the string does not represent a valid date
 	 *                              in the expected format
 	 */
+	
+	// control cohesion
+	// Phương thức getExpirationDate(String date) kiểm tra và chuyển đổi chuỗi đầu vào đại diện cho ngày hết hạn của thẻ thanh toán thành định dạng yêu cầu "mmyy".
 	private String getExpirationDate(String date) throws InvalidCardException {
 		String[] strs = date.split("/");
 		if (strs.length != 2) {
@@ -81,6 +89,9 @@ public class PaymentController extends BaseController {
 	 * @return {@link java.util.Map Map} represent the payment result with a
 	 *         message.
 	 */
+	
+	// control cohesion
+	// Phương thức payOrder(int amount, String contents, String cardNumber, String cardHolderName, String expirationDate, String securityCode) điều khiển quá trình thanh toán, tạo ra kết nối chặt chẽ giữa PaymentController, CreditCard, InterbankInterface, và InterbankSubsystem.
 	public Map<String, String> payOrder(int amount, String contents, String cardNumber, String cardHolderName,
 			String expirationDate, String securityCode) {
 		Map<String, String> result = new Hashtable<String, String>();
@@ -100,6 +111,8 @@ public class PaymentController extends BaseController {
 		return result;
 	}
 
+	// functional cohesion
+	// Phương thức emptyCart() làm việc trực tiếp với lớp Cart để làm rỗng giỏ hàng.
 	public void emptyCart(){
         Cart.getCart().emptyCart();
     }

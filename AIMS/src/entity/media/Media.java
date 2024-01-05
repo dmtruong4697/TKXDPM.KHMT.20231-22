@@ -14,9 +14,9 @@ import utils.Utils;
  * The general media class, for another media it can be done by inheriting this class
  * @author nguyenlm
  */
-public class Media {
+public class Media {//Functional Cohesion:manage information about media,Procedural Cohesion
 
-    private static Logger LOGGER = Utils.getLogger(Media.class.getName());
+    private static Logger LOGGER = Utils.getLogger(Media.class.getName()); //Media and Logger datacoupling through LOGGER variable 
 
     protected Statement stm;
     protected int id;
@@ -27,8 +27,7 @@ public class Media {
     protected int quantity;
     protected String type;
     protected String imageURL;
-
-    public Media() throws SQLException{
+    public Media() throws SQLException{ //Media and AIMSDB datacoupling through stm variable
         stm = AIMSDB.getConnection().createStatement();
     }
 
@@ -49,10 +48,10 @@ public class Media {
         return updated_quantity;
     }
 
-    public Media getMediaById(int id) throws SQLException{
+    public Media getMediaById(int id) throws SQLException{//Communicational Cohesion:communicate with database
         String sql = "SELECT * FROM Media ;";
         Statement stm = AIMSDB.getConnection().createStatement();
-        ResultSet res = stm.executeQuery(sql);
+        ResultSet res = stm.executeQuery(sql);//Media and ResulSet datacoupling through getMediaByID 
 		if(res.next()) {
 
             return new Media()
@@ -67,9 +66,9 @@ public class Media {
         return null;
     }
 
-    public List getAllMedia() throws SQLException{
+    public List getAllMedia() throws SQLException{//Communication Cohesion:communicate with database
         Statement stm = AIMSDB.getConnection().createStatement();
-        ResultSet res = stm.executeQuery("select * from Media");
+        ResultSet res = stm.executeQuery("select * from Media");//Media and ResultSet datacoupling through getAllMedia
         ArrayList medium = new ArrayList<>();
         while (res.next()) {
             Media media = new Media()
@@ -169,3 +168,9 @@ public class Media {
     }    
 
 }
+//Vi phạm tiêu chí SOLID
+//SRP:Lớp Media đang thực hiện nhiều trách nhiệm, bao gồm quản lý thông tin về phương tiện (Media), tương tác với cơ sở dữ liệu thông qua các phương thức như getMediaById và getAllMedia, và cũng thực hiện cập nhật dữ liệu thông qua updateMediaFieldById. 
+//DIP:Lớp Media phụ thuộc trực tiếp vào Statement và ResultSet, làm cho nó khó tái sử dụng và kiểm thử
+//Solution:
+//SRP:Tách chức năng của lớp Media thành các lớp nhỏ hơn với mỗi lớp có một trách nhiệm cụ thể
+//DIP:Sử dụng Dependency Injection (DI) để cung cấp Statement và ResultSet từ bên ngoài vào lớp Media.Sử dụng Interface để đại diện cho các phụ thuộc, giúp giảm sự phụ thuộc cụ thể và tăng tính linh hoạt.

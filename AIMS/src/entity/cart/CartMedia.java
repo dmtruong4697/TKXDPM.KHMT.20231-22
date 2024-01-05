@@ -1,3 +1,8 @@
+//Mức Độ Coupling: Low
+//Tất cả dữ liệu (media, quantity, price) được giữ bên trong lớp CartMedia và được truy cập thông qua các phương thức getter và setter
+
+// functional cohesion
+// Lớp CartMedia chứa các thuộc tính và phương thức liên quan chặt chẽ đến thông tin của một mục trong giỏ hàng, bao gồm đối tượng Media, số lượng và giá. Các phương thức và thuộc tính đều liên quan đến chức năng và thông tin của một mục trong giỏ hàng.
 package entity.cart;
 
 import entity.media.Media;

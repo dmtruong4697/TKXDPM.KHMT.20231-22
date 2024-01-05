@@ -14,22 +14,62 @@ This is a Capstone's source code for Software Design and Construction project
 ## Report Content
 
 <details>
-  <summary>W10: 27/11/2023~03/11/2023 </summary>
+  <summary>W12:4/12-10/12 </summary>
 <br>
 <details>
 <summary>Dương Minh Trưởng</summary>
 <br>
 
 - Assigned tasks:
-  - Task 1
-  - Task 2
-  - ...
+  - Đánh giá mức độ coupling trong các folder: default package, common, controller, entity.cart, entity.db
+</details>
+<details>
+<summary>Hồ Anh Trí</summary>
+<br>
 
-- Implementation details:
-  - Pull Request(s): [Attach links to your pull requests here. You can attach multiple pull requests]()
-  - Specific implementation details:
-    - Describe specific in detail what you did last week
-    - You can attach images if you want
+- Assigned tasks:
+  - Các cặp data coupling trong entity.Invoice,entity.Media,entity.Order,entity.Payment,entity.Shipping
+</details>
+</details>
+
+<details>
+  <summary>W13: 04/12/2023~11/12/2023 </summary>
+<br>
+<details>
+<summary>Dương Minh Trưởng</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá mức độ cohesion trong các folder: default package, common, controller, entity.cart, entity.db
+
+</details>
+<details>
+<summary>Hồ Anh Trí</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá mức độ cohesion trong các folder: entity.Invoice, Media, Order, Payment, Shipping
+
+</details>
+</details>
+
+<details>
+  <summary>W14: 11/12/2023~18/12/2023 </summary>
+<br>
+<details>
+<summary>Dương Minh Trưởng</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá mức độ S.O.L.I.D trong các folder: default package, common, controller, entity.cart, entity.db
+
+</details>
+<details>
+<summary>Hồ Anh Trí</summary>
+<br>
+
+- Assigned tasks:
+  - Đánh giá mức độ S.O.L.I.D trong các folder: entity.Invoice,Media,Order,Payment,Shipping
 
 </details>
 </details>

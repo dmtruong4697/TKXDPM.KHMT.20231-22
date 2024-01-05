@@ -2,13 +2,13 @@ package entity.order;
 
 import entity.media.Media;
 
-public class OrderMedia {
+public class OrderMedia {//Functional Cohesion:manage information about OrderMedia,Procedural Cohesion
     
     private Media media;
     private int price;
     private int quantity;
 
-    public OrderMedia(Media media, int quantity, int price) {
+    public OrderMedia(Media media, int quantity, int price) { //OrderMedia and Media datacoupling through media variable
         this.media = media;
         this.quantity = quantity;
         this.price = price;
@@ -48,3 +48,4 @@ public class OrderMedia {
     }
 
 }
+//Không vi phạm tiêu chí SOLID nào

@@ -1,3 +1,8 @@
+//Mức Độ Coupling: Moderate (control coupling)
+//Lớp Cart chứa các phương thức kiểm tra sự khả dụng của sản phẩm trong giỏ hàng và xử lý các thao tác như thêm, xóa, và kiểm tra tồn kho.
+
+// control cohesion
+// Cả lớp Cart tập trung vào quản lý giỏ hàng và thực hiện các thao tác liên quan như thêm, xóa, kiểm tra sự khả dụng, tính toán tổng số lượng và tính toán tổng giá trị. Các phương thức đều liên quan chặt chẽ đến chức năng quản lý giỏ hàng và thao tác trên các phần tử trong giỏ hàng.
 package entity.cart;
 
 import java.sql.SQLException;

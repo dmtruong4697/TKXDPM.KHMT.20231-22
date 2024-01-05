@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
-public class DVD extends Media {
+public class DVD extends Media {//Functional Cohesion:manage information about DVD,Procedural Cohesion
 
     String discType;
     String director;
@@ -102,13 +102,13 @@ public class DVD extends Media {
     }
 
     @Override
-    public Media getMediaById(int id) throws SQLException {
-        String sql = "SELECT * FROM "+
+    public Media getMediaById(int id) throws SQLException {//DVD and Media datacoupling through getMediaByID
+        String sql = "SELECT * FROM "+                     //Communicational Cohesion:comunicate with database
                      "aims.DVD " +
                      "INNER JOIN aims.Media " +
                      "ON Media.id = DVD.id " +
                      "where Media.id = " + id + ";";
-        ResultSet res = stm.executeQuery(sql);
+        ResultSet res = stm.executeQuery(sql); //DVD and ResultSet datacoupling through getMediaByID
         if(res.next()) {
             
         // from media table
@@ -139,3 +139,9 @@ public class DVD extends Media {
         return null;
     }
 }
+//Vi phạm tiêu chí SOLID
+//SRP:Lớp DVD đang thực hiện nhiều trách nhiệm, bao gồm quản lý thông tin về DVD, tương tác với cơ sở dữ liệu thông qua getMediaById,
+//DIP:Lớp DVD phụ thuộc trực tiếp vào ResultSet và stm (statement), làm cho nó khó tái sử dụng và khó kiểm thử
+//Solution:
+//SRP:Tách chức năng của lớp DVD thành các lớp nhỏ hơn
+//DIP:Sử dụng Dependency Injection (DI) để cung cấp ResultSet và stm từ bên ngoài vào lớp DVD.
