@@ -33,7 +33,7 @@ This is a Capstone's source code for Software Design and Construction project
 </details>
 
 <details>
-  <summary>W11: 04/12/2023~11/12/2023 </summary>
+  <summary>W13: 04/12/2023~11/12/2023 </summary>
 <br>
 <details>
 <summary>Dương Minh Trưởng</summary>
@@ -46,7 +46,7 @@ This is a Capstone's source code for Software Design and Construction project
 </details>
 
 <details>
-  <summary>W11: 11/12/2023~18/12/2023 </summary>
+  <summary>W14: 11/12/2023~18/12/2023 </summary>
 <br>
 <details>
 <summary>Dương Minh Trưởng</summary>
