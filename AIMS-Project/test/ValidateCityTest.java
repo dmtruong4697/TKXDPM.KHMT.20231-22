@@ -1,15 +1,12 @@
-
 import controller.PlaceOrderController;
-
-import static org.junit.jupiter.api.Assertions.*;
-//import org.junit.jupiter.api.Test;
-import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import static org.junit.Assert.assertEquals;
 
-class ValidatePhoneNumberTest {
+
+class ValidateCityTest {
 
   private PlaceOrderController placeOrderController;
 
@@ -24,17 +21,14 @@ class ValidatePhoneNumberTest {
 
   
   /** 
-   * @param phone
+   * @param address
    * @param expected
    */
   @ParameterizedTest
-  @CsvSource({ "0923456789,true", "0000000000,false", "000nnqa123,false", "1234567890,false",  "0987654,false"})
+  @CsvSource({ "Hà Nội,true", "null,false" })
 
-  public void test(String phone, boolean expected) {
-    // when
-    boolean isValid = placeOrderController.validatePhoneNumber(phone);
-
-    // then
+  void test(String address, boolean expected) {
+    boolean isValid = placeOrderController.validateAddress(address);
     assertEquals(expected, isValid);
   }
 }
