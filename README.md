@@ -74,4 +74,45 @@ This is a Capstone's source code for Software Design and Construction project
 </details>
 </details>
 
+<details>
+  <summary>Phân chia công việc bài tập lớn: </summary>
+<br>
+<details>
+<summary>Dương Minh Trưởng</summary>
+<br>
+
+- Assigned tasks:
+  - Tìm kiếm, sắp xếp sản phẩm. hủy đơn hàng
+ - Process: DONE
+
+</details>
+<details>
+<summary>Hồ Anh Trí</summary>
+<br>
+
+- Assigned tasks:
+  - Thanh toán đơn hàng
+ - Process: DONE
+
+</details>
+<details>
+<summary>Nguyễn Hữu Truyền</summary>
+<br>
+
+- Assigned tasks:
+  - Danh sách đơn hàng, phê duyệt/từ chối đơn hàng
+ - Process: DONE
+
+</details>
+<details>
+<summary>Lại Quốc Trung</summary>
+<br>
+
+- Assigned tasks:
+  - CRUD sản phẩm
+ - Process: NOT DONE
+
+</details>
+</details>
+
 ---
