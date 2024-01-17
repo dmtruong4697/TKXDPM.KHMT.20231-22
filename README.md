@@ -91,7 +91,7 @@ This is a Capstone's source code for Software Design and Construction project
 <br>
 
 - Assigned tasks:
-  - Thanh toán đơn hàng
+  -  Phê duyệt/từ chối đơn hàng
  - Process: DONE
 
 </details>
@@ -100,7 +100,7 @@ This is a Capstone's source code for Software Design and Construction project
 <br>
 
 - Assigned tasks:
-  - Danh sách đơn hàng, phê duyệt/từ chối đơn hàng
+  - Danh sách đơn hàng
  - Process: DONE
 
 </details>
